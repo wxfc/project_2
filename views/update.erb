@@ -1,4 +1,5 @@
 <h1>Update Review</h1>
+<a href="/">Home</a>
 
 <form action="/houses/<%= house["id"] %>" method="post">
     <input type="hidden" name="_method" value="patch">
@@ -16,5 +17,3 @@
     <input type="text" name="review" value="<%= house["review"] %>">
     <button>Update Review</button>
 </form>
-
-<a href="/">Home</a>

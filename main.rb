@@ -15,7 +15,7 @@ def logged_in?
 end
 
 def current_user
-  return find_one_house_by_id(session["user_id"])
+  return find_one_user_by_id(session["user_id"])
 end
 
 get '/' do
@@ -33,6 +33,7 @@ get '/houses/:id' do
 end
 
 post '/houses' do
+  return "You need an account to do that" unless logged_in?
   create_review(params["number_street"], params["suburb"], params["postcode"], params["image_url"], params["agent"], params["review"], current_user["id"])
   redirect '/'
 end
@@ -58,5 +59,24 @@ end
 
 post '/users' do
   create_user(params["name"], params["email"], params["password"])
+  redirect '/'
+end
+
+get '/session/new_sessions' do
+  erb :new_sessions
+end
+
+post '/session' do
+  user = find_one_user_by_email(params["email"])
+  if user && BCrypt::Password.new(user["password_digest"]) == params["password"]
+    session["user_id"] = user["id"]
+    redirect '/'
+  else
+    erb :new_sessions
+  end
+end
+
+delete '/session' do
+  session["user_id"] = nil
   redirect '/'
 end

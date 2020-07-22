@@ -1,3 +1,5 @@
+<a href="/">Home</a>
+
 <h1><%= house["number_street"] %> <%= house["suburb"] %>, <%= house["postcode"] %></h1>
 
 <img src="<%= house["image_url"] %>" alt="">
@@ -5,8 +7,6 @@
 <h3><%= house["agent"] %></h3>
 <p><%= house["review"] %></p>
 
-<a href="/houses/new" class="createReview">Post a Review</a>
-<a href="">Logout</a>
 <a href="/houses/<%= house["id"] %>/update">Update Review</a>
 
 <form action="/houses/<%= house["id"] %>" method="post">
@@ -14,6 +14,3 @@
     <button>Delete Review</button>
 </form>
 
-<a href="">Sign Up</a>
-<a href="">Login</a>
-<a href="/">Home</a>
