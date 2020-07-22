@@ -1,1 +1,13 @@
-<h1>hello world</h1>
+<h1>Rate That Agent</h1>
+
+<a href="/houses/new" class="createReview">Post a Review</a>
+<a href="">Logout</a>
+<a href="/users/signup">Sign Up</a>
+<a href="">Login</a>
+
+<% houses.each do |house| %>
+    <h2><%= house["number_street"] %> <%= house["suburb"] %>, <%= house["postcode"] %></h2>
+    <a href="/houses/<%= house["id"] %>">
+        <img src="<%= house["image_url"] %>" alt="">
+    </a>
+<% end %>

@@ -1,0 +1,5 @@
+INSERT INTO houses (number_street, suburb, postcode, image_url, agent, review) VALUES ('16 George St', 'Fitzroy', 3065, 'https://images.realestateview.com.au/pics/715/16-george-street-fitzroy-vic-3065-real-estate-photo-1-xlarge-13243715.jpg', 'Nelson Alexander', 'average');
+
+INSERT INTO houses (number_street, suburb, postcode, image_url, agent, review) VALUES ('8/34 Tivoli Road', 'South Yarra', 3141, 'https://images.realestateview.com.au/pics/080/34-tivoli-road-south-yarra-vic-3141-real-estate-photo-1-xlarge-13250080.jpg', 'Kay & Burton', 'below average');
+
+INSERT INTO houses (number_street, suburb, postcode, image_url, agent, review) VALUES ('7 Dundas Street', 'Preston', 3072, 'https://images.realestateview.com.au/pics/885/7-dundas--street-preston-vic-3072-real-estate-photo-1-xlarge-13253885.jpg', 'Jellis Craig', 'average');
