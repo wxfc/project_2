@@ -39,8 +39,14 @@ post '/houses' do
 end
 
 delete '/houses/:id' do
-  destroy_review(params["id"])
-  redirect '/'
+  user = find_one_user_by_id(params["id"])
+  house = find_one_house_by_user_id(params["user_id"])
+  if  user == house
+    destroy_review(params["id"])
+    redirect '/'
+  else
+    redirect '/'
+  end
 end
 
 get '/houses/:id/update' do
@@ -49,8 +55,14 @@ get '/houses/:id/update' do
 end
 
 patch '/houses/:id' do
-  update_review(params["id"], params["number_street"], params["suburb"], params["postcode"], params["image_url"], params["agent"], params["review"])
-  redirect "/houses/#{params["id"]}"
+  user = find_one_user_by_id(params["id"])
+  house = find_one_house_by_user_id(params["user_id"])
+  if user == house
+    update_review(params["id"], params["number_street"], params["suburb"], params["postcode"], params["image_url"], params["agent"], params["review"])
+    redirect "/houses/#{params["id"]}"
+  else
+    redirect '/'
+  end
 end
 
 get '/users/signup' do

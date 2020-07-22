@@ -28,3 +28,8 @@ def destroy_review(id)
     sql = "DELETE FROM houses WHERE id = #{id}"
     run_sql(sql)
 end
+
+def find_one_house_by_user_id(user_id)
+    house = run_sql("SELECT * FROM houses WHERE user_id = #{user_id};")
+    return house.first
+end

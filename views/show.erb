@@ -7,10 +7,11 @@
 <h3><%= house["agent"] %></h3>
 <p><%= house["review"] %></p>
 
-<a href="/houses/<%= house["id"] %>/update">Update Review</a>
-
-<form action="/houses/<%= house["id"] %>" method="post">
-    <input type="hidden" name="_method" value="delete">
-    <button>Delete Review</button>
-</form>
+<% if logged_in? %>
+    <a href="/houses/<%= house["id"] %>/update">Update Review</a>
+    <form action="/houses/<%= house["id"] %>" method="post">
+        <input type="hidden" name="_method" value="delete">
+        <button>Delete Review</button>
+    </form>
+<% end %>
 
