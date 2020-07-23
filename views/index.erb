@@ -1,8 +1,12 @@
-<h1>Rate That Agent</h1>
+<h1 id="rta">Rate That Agent</h1>
 
 <% houses.each do |house| %>
-    <h2><%= house["number_street"] %> <%= house["suburb"] %>, <%= house["postcode"] %></h2>
-    <a href="/houses/<%= house["id"] %>">
-        <img src="<%= house["image_url"] %>" alt="">
-    </a>
+    <div id="box">
+        <a href="/houses/<%= house["id"] %>">
+            <img src="<%= house["image_url"] %>" id="indy">
+            <div id="addy">
+                <h4><%= house["number_street"] %> <%= house["suburb"] %>, <%= house["postcode"] %></h4>
+            </div>
+        </a>
+    </div>
 <% end %>

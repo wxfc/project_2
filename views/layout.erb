@@ -5,18 +5,20 @@
   <title>Rate That Agent</title>
   <link rel='stylesheet' href='/stylesheets/main.css'>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
   <% if logged_in? %>
-    <p>Logged in as <%= current_user["name"] %></p>
-    <a href="/houses/new">Post a Review</a>
+    <p id="cur_user">Logged in as <%= current_user["name"] %></p>
+    <a href="/"  id="linky">Home</a>
+    <a href="/houses/new" id="linky">Post a Review</a>
     <form action="/session" method="post">
       <input type="hidden" name="_method" value="delete">
       <button>Logout</button> 
     </form>
   <% else %>
-    <a href="/users/signup">Sign Up</a>
-    <a href="/session/new_sessions">Login</a>
+    <a href="/users/signup"  id="linky">Sign Up</a>
+    <a href="/session/new_sessions"  id="linky">Login</a>
   <% end %>
   
   <%= yield %>

@@ -1,6 +1,98 @@
 body {
     text-align: center;
+    font-family: 'Playfair Display', serif;
 }
 img {
-    width: 250px;
+    width: 400px;
+    height: 300px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;
+    border: 3px solid mistyrose;
+}
+#indy {
+    width: 400px;
+    height: 300px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 20px;
+    border: 3px solid mistyrose;
+    opacity: 0.7;
+}
+#indy:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    opacity: 1;
+}
+#box {
+    position: relative;
+    display: inline-block;
+}
+#box #addy {
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 70%;
+    text-align: center;
+    width: 80%;
+}
+#addy {
+    color: mistyrose;
+    background-color: olive;
+    border-radius: 20px;
+}
+#rta {
+    background-color: olive;
+    width: 50%;
+    padding: 2%;
+    margin: auto;
+    border-radius: 20px;
+}
+#rta:hover {
+    opacity: .6;
+}
+button {
+    margin: 20px;
+    cursor: pointer;
+}
+#linky {
+    text-decoration: none;
+    color: mistyrose;
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+}
+#linky:before, #linky:after{
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	transition: all 0.3s ease;
+}
+#linky:before{
+	top: -2.5%;
+	left: -1%;
+	border-top: 2px solid mistyrose;
+	border-left: 2px solid mistyrose;	
+}
+#linky:after{
+	bottom: -2.5%;
+	right: -1%;
+	border-bottom: 2px solid mistyrose;
+	border-right: 2px solid mistyrose;
+}
+#linky:hover:before, #linky:hover:after{
+	width: 100%;
+	height: 100%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+#cur_user {
+    color: mistyrose;
+    font-size: 10px;
+    padding: 10px;
+    margin: 10px;
 }
