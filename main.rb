@@ -33,20 +33,22 @@ get '/houses/:id' do
 end
 
 post '/houses' do
-  return "You need an account to do that" unless logged_in?
   create_review(params["number_street"], params["suburb"], params["postcode"], params["image_url"], params["agent"], params["review"], current_user["id"])
   redirect '/'
 end
 
 delete '/houses/:id' do
-  user = find_one_user_by_id(params["id"])
-  house = find_one_house_by_user_id(params["user_id"])
-  if  user == house
+  house = find_one_house_by_id(params["id"])
+  if  session["user_id"] == house["user_id"]
     destroy_review(params["id"])
     redirect '/'
   else
-    redirect '/'
+    erb :unable
   end
+end
+
+get '/houses/unable' do
+  
 end
 
 get '/houses/:id/update' do
@@ -55,13 +57,12 @@ get '/houses/:id/update' do
 end
 
 patch '/houses/:id' do
-  user = find_one_user_by_id(params["id"])
-  house = find_one_house_by_user_id(params["user_id"])
-  if user == house
+  house = find_one_house_by_id(params["id"])
+  if session["user_id"] == house["user_id"]
     update_review(params["id"], params["number_street"], params["suburb"], params["postcode"], params["image_url"], params["agent"], params["review"])
     redirect "/houses/#{params["id"]}"
   else
-    redirect '/'
+    erb :unable
   end
 end
 

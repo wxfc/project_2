@@ -35,6 +35,6 @@ def find_one_house_by_user_id(user_id)
 end
 
 def find_houses_by_south_yarra(suburb)
-    houses = run_sql("SELECT * FROM houses WHERE suburb = ''South Yarra'';")
+    houses = run_sql("SELECT * FROM houses WHERE suburb = 'South Yarra';")
     return houses
 end

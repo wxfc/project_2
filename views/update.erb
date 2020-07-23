@@ -1,18 +1,32 @@
 <h1>Update Review</h1>
 
-<form action="/houses/<%= house["id"] %>" method="post">
-    <input type="hidden" name="_method" value="patch">
-    <label for="">Number and Street</label>
-    <input type="text" name="number_street" value="<%= house["number_street"] %>">
-    <label for="">Suburb</label>
-    <input type="text" name="suburb" value="<%= house["suburb"] %>">
-    <label for="">Postcode</label>
-    <input type="text" name="postcode" value="<%= house["postcode"] %>">
-    <label for="">Image (URL)</label>
-    <input type="text" name="image_url" value="<%= house["image_url"] %>">
-    <label for="">Agent</label>
-    <input type="text" name="agent" value="<%= house["agent"] %>">
-    <label for="">Review</label>
-    <input type="text" name="review" value="<%= house["review"] %>">
-    <button>Update Review</button>
-</form>
+<div class="forms">
+    <form action="/houses/<%= house["id"] %>" method="post">
+        <input type="hidden" name="_method" value="patch">
+        <p>
+        <label for="">Number and Street</label>
+        <input type="text" name="number_street" value="<%= house["number_street"] %>">
+        </p>
+        <p>
+        <label for="">Suburb</label>
+        <input type="text" name="suburb" value="<%= house["suburb"] %>">
+        </p>
+        <p>
+        <label for="">Postcode</label>
+        <input type="text" name="postcode" value="<%= house["postcode"] %>">
+        </p>
+        <p>
+        <label for="">Image (URL)</label>
+        <input type="text" name="image_url" value="<%= house["image_url"] %>">
+        </p>
+        <p>
+        <label for="">Agent</label>
+        <input type="text" name="agent" value="<%= house["agent"] %>">
+        </p>
+        <p>
+        <label for="">Review</label>
+        <input type="text" name="review" value="<%= house["review"] %>">
+        </p>
+        <p><button>Update Review</button></p>
+    </form>
+</div>

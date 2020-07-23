@@ -8,19 +8,24 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="bg"></div>
+  <div class="bg bg2"></div>
+  <div class="bg bg3"></div>
   <% if logged_in? %>
     <p id="cur_user">Logged in as <%= current_user["name"] %></p>
     <a href="/"  id="linky">Home</a>
     <a href="/houses/new" id="linky">Post a Review</a>
-    <form action="/session" method="post">
+    <form action="/session" method="post" class="logout">
       <input type="hidden" name="_method" value="delete">
       <button>Logout</button> 
     </form>
   <% else %>
+    <p id="cur_user">Not Logged In</p>
+    <a href="/"  id="linky">Home</a>
     <a href="/users/signup"  id="linky">Sign Up</a>
     <a href="/session/new_sessions"  id="linky">Login</a>
   <% end %>
-  
+
   <%= yield %>
 
 </body>

@@ -2,11 +2,13 @@
 
 <img src="<%= house["image_url"] %>" alt="">
 
-<h3><%= house["agent"] %></h3>
+<h3>Real Estate Agent: <%= house["agent"] %></h3>
 
 
 <% if logged_in? %>
-    <p><%= house["review"] %></p>
+    <div class="review">
+        <h4>Review</h4><p><%= house["review"] %></p>
+    </div>
     <a href="/houses/<%= house["id"] %>/update"  id="linky">Update Review</a>
     <form action="/houses/<%= house["id"] %>" method="post">
         <input type="hidden" name="_method" value="delete">
