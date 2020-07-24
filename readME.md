@@ -1,6 +1,8 @@
 # Rate That Agent
 
-Rate that agent is a web app built for rental tenants by rental tenants. The app is designed to allow tenants to post reviews on real estate agents or landlords to give an insight on their experience renting from them. 
+Rate that agent is a web app built for rental tenants by rental tenants. The app is designed to allow tenants to post reviews on real estate agents or landlords to give an insight on their experience renting from them.
+
+View app at: https://cryptic-hollows-95726.herokuapp.com/
 
 ## App Features:
 
