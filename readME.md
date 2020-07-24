@@ -23,7 +23,7 @@ I looked at what tables would be required for the database (see below) and what 
 
 Then I looked at how I wanted to map the paths of the app and mocking up how each page would look.
 
-Before getting down to code, I created a Trello board to help organise my process and to keep track of the minor things to do as well as the major parts of the app.
+Before getting down to code, I created a Trello board (https://trello.com/b/SkqYw51n/project-2) to help organise my process and to keep track of the minor things to do as well as the major parts of the app.
 
 Tables created with SQL:
 - Users
