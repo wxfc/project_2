@@ -42,9 +42,14 @@ The main challenges I had was to do with broken paths and syntax errors. Using t
 - The homepage to include the latest posts with a link to 'more'
   - As well as highlighted suburbs with a link to more in that suburb
 - Horiztonal gallery of the posts, with multiple galleries
+- An "Are you sure?" when deleting a review
+- Confirmation of passwords when creating an account
+  - Alert if password or email incorrect when logging in
+  - Confirming email sent to user
 - Search function
 - Upload lease to confirm living at the rental
 - Posts would need to be verified, especially if it's a really bad review
 - Landlords ability to request removal of the review if they a new owners of the property
 - Pros & cons section for the review
 - Feedback page on the app
+- Make sure you can't sign up with the same email more than once
