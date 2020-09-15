@@ -1,23 +1,23 @@
-# Rate That Agent
+# Rental Ratings
 
-Rate that agent is a web app built for rental tenants by rental tenants. The app is designed to allow tenants to post reviews on real estate agents or landlords to give an insight on their experience renting from them.
+Rental Ratings is a web app built for rental tenants by rental tenants. The app is designed to allow tenants to post reviews on real estate agents or landlords to give an insight on their experience renting from them.
 
 View app at: https://cryptic-hollows-95726.herokuapp.com/
 
-## App Features:
+### App Features:
 
 - Create an account
 - Login and Logout
 - Post reviews
 - Update or Delete a review (only allowed if it is the owner of the post)
 
-## Technologies:
+### Technologies:
 
 - Built using Ruby with Sinatra framework
 - PostgresSQL
 - BCrypt
 
-## Process:
+### Process:
 
 When creating this app, I first started writing wireframes to create a map of how this was to be compelted and what I wanted to accomplish with this app.
 
@@ -31,11 +31,11 @@ Tables created with SQL:
 - Users
 - Houses
 
-## Challenges:
+### Challenges:
 
 The main challenges I had was to do with broken paths and syntax errors. Using the errors, I was able to fix my issues and navigate more cleanly through the paths. 
 
-## Incompleted:
+### Incompleted:
 
 - Ability to delete account
 - A rating system out of 5 stars
