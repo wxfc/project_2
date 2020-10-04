@@ -2,7 +2,7 @@ require "bcrypt"
 
 def run_user_sql(sql, arr = [])
     db = PG.connect(ENV['DATABASE_URL'] || {dbname: 'ratethatagent'})
-    results = db.exec(sql)
+    results = db.exec(sql, arr)
     db.close
     return results
  end
